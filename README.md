@@ -1,6 +1,6 @@
 # Proyecto Semilla — Deliberación y seguimiento en el comité técnico
 
-**Grupo:** [4] · **Integrantes:** [Roberto Ulloa ([@usuario1](https://github.com/ulloar1973-arch)), Erica Alvarado (@Erica2501)
+**Grupo:** [4] · **Integrantes:** [Roberto Ulloa ([@usuario1](https://github.com/ulloar1973-arch)), Erica Alvarado ([@Erica2501](https://github.com/Erica2501))
 **Tipo de escenario:** [sintético]
 
 ## Intención de transformación
