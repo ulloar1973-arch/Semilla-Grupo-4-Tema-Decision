@@ -1,3 +1,0 @@
-# Bitácora
-
-- 2026-11-24 — Al visualizar el proyecto (reflexión propuesta para validar con el grupo): creíamos que la jerarquía explicaba el silencio → ahora distinguimos que la dependencia y la ausencia de seguimiento están descritas, mientras que el orden habitual, las objeciones reservadas y la interpretación de consenso siguen abiertos → cambió al exigir una fuente para cada flecha y comparar su alcance con el de [E-001](../03-experimentos/E-001.md). Primer paso propuesto: [EV-001](../evidencia/registro.md), para reconstruir al menos dos decisiones comparables. Complementar con EV-002 para saber si había objeciones y cómo se interpretó el silencio. Registrar después lo que cambie a partir del intercambio.
