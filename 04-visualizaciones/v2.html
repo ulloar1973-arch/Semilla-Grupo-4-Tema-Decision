@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto Semilla · v2</title><style>
+:root{color-scheme:light;--ink:#192a42;--muted:#496078;--navy:#182e52;--page:#eef3f8;--paper:#fff;--fact:#08665f;--hyp:#6a3696;--open:#8a4a0f}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}
+header{background:var(--navy);color:white;padding:clamp(1.4rem,5vw,3.8rem) max(1.1rem,calc((100% - 1120px)/2))}
+header p{max-width:74ch;margin:.6rem 0 0}h1{line-height:1.12;font-size:clamp(1.8rem,5vw,3rem);margin:.3rem 0}
+.kicker,.meta{font-size:.76rem;font-weight:750;letter-spacing:.045em}
+main{max-width:1160px;margin:auto;padding:1.1rem}.legend{display:flex;gap:.6rem 1.25rem;flex-wrap:wrap;padding:0;list-style:none}
+.legend li{display:flex;align-items:center;gap:.45rem;font-size:.9rem}.legend i{width:2rem;border-top:3px var(--stroke) var(--accent)}
+.fact{--accent:var(--fact);--stroke:solid}.hyp{--accent:var(--hyp);--stroke:dashed}.open{--accent:var(--open);--stroke:dotted}
+.views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem;align-items:start}
+section{background:var(--paper);border:1px solid #cbd7e5;border-radius:1rem;padding:clamp(.85rem,2.1vw,1.5rem)}
+h2{font-size:1.35rem;line-height:1.2;margin:0}h3{font-size:1rem;margin:.9rem 0 .45rem}.question{color:var(--muted);margin:.4rem 0 1rem}
+.flow{display:grid;gap:.3rem}.node{border:1px solid #cbd7e5;border-inline-start:4px solid var(--accent);border-radius:.65rem;background:#f8fafc}
+summary{cursor:pointer;padding:.58rem .72rem;display:grid;grid-template-columns:1fr auto;gap:.45rem;align-items:center;list-style:none}
+summary::-webkit-details-marker{display:none}summary::after{content:'+';font-weight:800;color:var(--accent)}[open]>summary::after{content:'−'}summary:hover{background:#edf3fb}
+summary:focus-visible,a:focus-visible{outline:3px solid #7644ab;outline-offset:2px}.meta,strong{display:block}.meta{color:var(--accent)}
+.edge{margin-inline:.8rem 0}.edge summary{grid-template-columns:1.35rem 1fr auto;padding-block:.3rem}.edge strong{font-size:.92rem}
+.arrow-line{border-inline-start:3px var(--stroke) var(--accent);color:var(--accent);min-height:2em;padding-inline-start:.22em;display:flex;align-items:end;font-weight:800}
+.detail{padding:.1rem .8rem .5rem}.edge .detail{padding-inline-start:2.5rem}.detail p{margin:.25rem 0 .45rem}.source{font-size:.88rem;color:var(--muted)}
+a{color:#284c85}footer{margin:.9rem 0;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){.views{grid-template-columns:1fr}}
+@media print{body{background:white}header{color:var(--ink);background:white;padding:0 1rem}section{break-inside:avoid}.views{display:block}}
+</style></head>
+<body><header><p class="kicker">MÓDULO 4 · SESIÓN 2 · VERSIÓN 2</p>
+<h1>Proyecto Semilla</h1><p>Silencio ante decisiones del comité y falta de revisión posterior</p><p>Borrador técnico para revisión del grupo. Incluye cambios trazables a los archivos. La revisión cruzada y la aprobación todavía están pendientes.</p></header>
+<main><p>Abrí cada tarjeta o flecha para leer su descripción y consultar la fuente. Las reglas de E-001 se muestran como parte del protocolo escrito.</p>
+<ul class="legend" aria-label="Tipos de líneas"><li class="fact"><i aria-hidden="true"></i>Continua · Hecho documentado</li>
+<li class="hyp"><i aria-hidden="true"></i>Discontinua · Supuesto o hipótesis</li>
+<li class="open"><i aria-hidden="true"></i>Punteada · Pregunta abierta</li></ul>
+<div class="views"><section aria-labelledby="vistaA"><h2 id="vistaA">A · El ciclo que sostiene el patrón</h2>
+<p class="question">¿Qué relaciones podrían hacer que el comité se reserve objeciones y que las decisiones queden sin revisión?</p>
+<div class="flow"><details class="node fact">
+<summary><span><span class="meta">Hecho documentado</span><strong>Reglas y condiciones</strong></span></summary>
+<div class="detail"><p>El comité reporta a la gerencia. El caso también describe ausencia de revisión posterior de las decisiones.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a></p></div>
+</details><details class="edge hyp">
+<summary><span class="arrow-line" aria-hidden="true">↓</span><span><span class="meta">Supuesto o hipótesis <span class="flag">[POR VALIDAR]</span></span><strong>Dependencia jerárquica → posible reserva de objeciones</strong></span></summary>
+<div class="detail"><p>Una objeción podría percibirse costosa para quien reporta a la gerencia. S-02 y H-001 exploran la contribución del turno. H-R02 plantea que parte de la brecha podría persistir si la gerencia habla al final.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a> · <a href="../00-intencion/supuestos.md">Supuestos</a> · <a href="../02-hipotesis/H-001.md">H-001</a></p></div>
+</details><details class="node hyp">
+<summary><span><span class="meta">Supuesto o hipótesis <span class="flag">[POR VALIDAR]</span></span><strong>Prácticas propuestas en el patrón</strong></span></summary>
+<div class="detail"><p>La gerencia podría expresar su preferencia antes de la ronda de objeciones. Algunas objeciones pertinentes podrían quedar sin expresarse o fuera del acta. EV-001 y EV-002 siguen pendientes.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a> · <a href="../00-intencion/supuestos.md">Supuestos</a></p></div>
+</details><details class="edge hyp">
+<summary><span class="arrow-line" aria-hidden="true">↓</span><span><span class="meta">Supuesto o hipótesis <span class="flag">[POR VALIDAR]</span></span><strong>Objeciones que no se oyen → aparente consenso</strong></span></summary>
+<div class="detail"><p>Si alguien reserva una objeción, la gerencia puede interpretar la falta de desacuerdo como consenso. El acuerdo genuino también es posible.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a> · <a href="../00-intencion/supuestos.md">Supuestos</a> · <a href="../02-hipotesis/H-001.md">H-001</a></p></div>
+</details><details class="node hyp">
+<summary><span><span class="meta">Supuesto o hipótesis <span class="flag">[POR VALIDAR]</span></span><strong>Narrativa posible · “Hay consenso”</strong></span></summary>
+<div class="detail"><p>El caso plantea esta lectura como posible explicación. No se ha comprobado qué entendió la gerencia ni si las personas coincidían.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a></p></div>
+</details><details class="edge open">
+<summary><span class="arrow-line" aria-hidden="true">↶</span><span><span class="meta">Pregunta abierta <span class="flag">[POR VALIDAR]</span></span><strong>¿El aparente consenso sostiene la falta de revisión?</strong></span></summary>
+<div class="detail"><p>Flecha de retorno a las reglas y condiciones. La ausencia de revisión está descrita en el caso. Su relación causal con la interpretación del silencio sigue abierta.</p><p>Para examinarla, EV-001 reconstruye decisiones comparables y EV-002 pregunta cómo se interpretó el silencio. E-001 no prueba esta flecha.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a></p></div>
+</details><details class="node open">
+<summary><span><span class="meta">Pregunta abierta <span class="flag">[POR VALIDAR]</span></span><strong>Equipos que ejecutan · participación por aclarar</strong></span></summary>
+<div class="detail"><p>El mapa los reconoce como posibles afectados. EV-001 puede ayudar a determinar si recibieron, ejecutaron o dieron seguimiento a decisiones concretas. Su papel en el circuito queda abierto.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a> · <a href="../evidencia/registro.md">Registro de evidencia</a></p></div>
+</details></div></section>
+<section aria-labelledby="vistaB"><h2 id="vistaB">B · Mapa de incertidumbres</h2>
+<p class="question">¿Qué puede aclarar la simulación y qué resultado justificaría considerar una prueba de campo?</p>
+<div class="flow"><details class="node fact">
+<summary><span><span class="meta">Hecho documentado</span><strong>Qué sabemos del caso</strong></span></summary>
+<div class="detail"><p>El comité reporta a la gerencia y el relato describe decisiones sin revisión posterior. Estos dos datos solo caracterizan el caso descrito.</p><p class="source">Fuente · <a href="../00-intencion/mapa-del-sistema.md">Mapa del sistema</a></p></div>
+</details><details class="edge open">
+<summary><span class="arrow-line" aria-hidden="true">↓</span><span><span class="meta">Pregunta abierta <span class="flag">[POR VALIDAR]</span></span><strong>¿Se repite el patrón en decisiones comparables?</strong></span></summary>
+<div class="detail"><p>EV-001 examinará la secuencia real, los intentos de ajuste y la revisión. EV-002 buscará los motivos para hablar, callar o estar de acuerdo.</p><p class="source">Fuente · <a href="../00-intencion/supuestos.md">Supuestos</a> · <a href="../evidencia/registro.md">Registro de evidencia</a></p></div>
+</details><details class="node hyp">
+<summary><span><span class="meta">Supuesto o hipótesis <span class="flag">[POR VALIDAR]</span></span><strong>Qué suponemos · H-001</strong></span></summary>
+<div class="detail"><p>Cuando la gerencia expresa su preferencia después de la ronda, aumenta la proporción de objeciones pertinentes registradas en privado que se expresan antes del cierre.</p><p class="source">Fuente · <a href="../00-intencion/supuestos.md">Supuestos</a> · <a href="../02-hipotesis/H-001.md">H-001</a></p></div>
+</details><details class="edge fact">
+<summary><span class="arrow-line" aria-hidden="true">↓</span><span><span class="meta">Plan documentado</span><strong>Protocolo previsto para contrastar H-001</strong></span></summary>
+<div class="detail"><p>E-001 documenta una simulación con casos ficticios, dos condiciones y el registro de objeciones en privado antes de conocer la preferencia. La línea representa la relación documentada entre hipótesis y protocolo.</p><p class="source">Fuente · <a href="../02-hipotesis/H-001.md">H-001</a> · <a href="../03-experimentos/E-001.md">E-001</a></p></div>
+</details><details class="node fact">
+<summary><span><span class="meta">Plan documentado</span><strong>Qué probará E-001</strong></span></summary>
+<div class="detail"><p>A: preferencia de la gerencia antes de la ronda. B: preferencia después de la ronda y antes del cierre. Se mantiene igual la facilitación, el guion y el tiempo. Indicador: objeciones pertinentes expresadas / objeciones pertinentes registradas en privado, por condición.</p><p>Rivales: insumos insuficientes (H-R01) y costo de discrepar aun sin una preferencia explícita (H-R02). La simulación no mide la calidad de las decisiones reales.</p><p class="source">Fuente · <a href="../03-experimentos/E-001.md">E-001</a></p></div>
+</details><details class="edge open">
+<summary><span class="arrow-line" aria-hidden="true">↓</span><span><span class="meta">Pregunta abierta <span class="flag">[POR VALIDAR]</span></span><strong>¿Qué permiten decidir los resultados?</strong></span></summary>
+<div class="detail"><p>Primero verificar el protocolo, al menos cuatro personas con ambas rondas y al menos cuatro objeciones pertinentes en cada condición.</p><p class="source">Fuente · <a href="../03-experimentos/E-001.md">E-001</a></p></div>
+</details><details class="node fact">
+<summary><span><span class="meta">Criterio documentado</span><strong>Decisión condicionada al resultado</strong></span></summary>
+<div class="detail"><p>Si el piloto es interpretable y B supera a A por 25 puntos porcentuales o más, considerar una prueba de campo. Si mejora entre 0 y 25 sin incluir extremos, queda por debajo del umbral. Con diferencia de cero o negativa se contradice la predicción del piloto. Si no se cumplen los mínimos, el resultado es inconcluso.</p><p class="source">Fuente · <a href="../02-hipotesis/H-001.md">H-001</a> · <a href="../03-experimentos/E-001.md">E-001</a></p></div>
+</details></div></section></div>
+<footer><a href="v1.html">Comparar con v1</a> · <a href="../05-aprendizajes/objeciones-ia.md#o-02--revisión-de-la-visualización">Registro de revisión</a></footer></main></body></html>
